@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "vite --host 0.0.0.0 --port 62023",
     "build": "vue-tsc -b && vite build",
+    "typecheck:engine": "tsc -p tsconfig.test.json",
+    "test:engine": "node scripts/engine-test.mjs",
     "preview": "vite preview --host 0.0.0.0 --port 62023"
   },
   "dependencies": {
@@ -21,6 +23,7 @@
     "zod": "^3.24.0"
   },
   "devDependencies": {
+    "@types/node": "^26.6.4",
     "@vitejs/plugin-vue": "^6.0.1",
     "typescript": "^5.9.2",
     "vite": "^7.1.3",
